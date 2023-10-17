@@ -1,0 +1,43 @@
+.character-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.character-card {
+  background-color: #1f4068;
+  color: #ffd700;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.character-card:hover {
+  background-color: #ffd700;
+  color: #1f4068;
+  cursor: pointer;
+}
+
+.character-card img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.character-card h2 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.character-card .status {
+  font-weight: bold;
+}
+
+.character-card .status.alive {
+  color: #4caf50;
+}
+
+.character-card .status.dead {
+  color: #ff5722;
+}

@@ -1,0 +1,30 @@
+<div *ngIf="loading">Loading...</div>
+<div *ngIf="error">{{ error }}</div>
+<app-search-bar (searchEvent)="performSearch($event)"></app-search-bar>
+<div class="character-list">
+  <div
+    *ngFor="
+      let character of characters
+        | paginate
+          : {
+              itemsPerPage: itemsPerPage,
+              currentPage: currentPage,
+              id: 'characters-pagination'
+            }
+    "
+    class="character-card"
+    (click)="showCharacterDetails(character.id)"
+  >
+    <img [src]="character.image" alt="{{ character.name }}" />
+    <h2>{{ character.name }}</h2>
+    <p class="status" [ngClass]="character.status.toLowerCase()">
+      {{ character.status }}
+    </p>
+  </div>
+</div>
+<div class="pagination-container">
+  <pagination-controls
+    (pageChange)="currentPage = $event"
+    id="characters-pagination"
+  ></pagination-controls>
+</div>

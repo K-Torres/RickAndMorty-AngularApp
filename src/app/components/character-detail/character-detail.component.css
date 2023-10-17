@@ -1,0 +1,33 @@
+.character-card {
+  background-color: #2b2d42;
+  color: #ffd700;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.character-card img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.character-card h2 {
+  font-size: 2rem;
+  margin: 10px 0;
+}
+
+.character-card .status {
+  font-weight: bold;
+}
+
+.character-card .status.alive {
+  color: #4caf50;
+}
+
+.character-card .status.dead {
+  color: #ff5722;
+}

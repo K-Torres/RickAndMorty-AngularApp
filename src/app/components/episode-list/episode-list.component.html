@@ -1,0 +1,29 @@
+<div *ngIf="loading">Loading...</div>
+<div *ngIf="error">{{ error }}</div>
+<app-search-bar (searchEvent)="performSearch($event)"></app-search-bar>
+<div class="episode-list">
+  <div
+    *ngFor="
+      let episode of episodes
+        | paginate
+          : {
+              itemsPerPage: itemsPerPage,
+              currentPage: currentPage,
+              id: 'episodes-pagination'
+            }
+    "
+    class="episode-card"
+    (click)="showEpisodeDetails(episode.id)"
+  >
+    <h2>{{ episode.name }}</h2>
+    <p>Episode {{ episode.episode }}</p>
+  </div>
+</div>
+<div class="pagination-container">
+  <pagination-controls
+    (pageChange)="currentPage = $event"
+    previousLabel="Anterior"
+    nextLabel="Siguiente"
+    id="episodes-pagination"
+  ></pagination-controls>
+</div>

@@ -1,0 +1,12 @@
+<div *ngIf="loading">Loading...</div>
+<div *ngIf="error">{{ error }}</div>
+<div class="episode-detail">
+  <h2>{{ episode.name }}</h2>
+  <p>Episode {{ episode.episode }}</p>
+  <h3>Featured characters:</h3>
+  <ul>
+    <li *ngFor="let character of episode.characters">{{ character }}</li>
+  </ul>
+  <p><strong>Episode air date:</strong> {{ episode.air_date }}</p>
+  <p><strong>Season:</strong> {{ episode.season }}</p>
+</div>

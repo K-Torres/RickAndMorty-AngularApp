@@ -1,0 +1,29 @@
+.navbar {
+  background-color: #1f4068;
+  color: #ffd700;
+  padding: 10px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px;
+  margin-bottom: 50px;
+}
+
+.navbar a {
+  color: #ffd700;
+  text-decoration: none;
+  padding: 10px 20px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.navbar a:hover {
+  background-color: #ffd700;
+  color: #1f4068;
+  border-radius: 5px;
+}

@@ -1,1 +1,53 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  color: #ffd700;
+  background-color: #1f4068;
+}
+
+.pagination-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.pagination a {
+  display: inline-block;
+  padding: 8px 12px;
+  margin: 2px;
+  background-color: #007bff;
+  color: #fff;
+  border: 1px solid #007bff;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.pagination a.current {
+  background-color: #ffc107;
+  color: #333;
+}
+
+.pagination a.prev,
+.pagination a.next {
+  background-color: #007bff;
+}
+
+.pagination a.prev.disabled,
+.pagination a.next.disabled {
+  background-color: #ccc;
+  border-color: #ccc;
+  cursor: not-allowed;
+}
+
+.pagination a.prev {
+  margin-right: 10px;
+}
+
+.pagination a.next {
+  margin-left: 10px;
+}
+
+.pagination a:hover {
+  background-color: #0056b3;
+}

@@ -1,0 +1,29 @@
+<div *ngIf="loading">Loading...</div>
+<div *ngIf="error">{{ error }}</div>
+<app-search-bar (searchEvent)="performSearch($event)"></app-search-bar>
+<div class="location-list">
+  <div
+    *ngFor="
+      let location of locations
+        | paginate
+          : {
+              itemsPerPage: itemsPerPage,
+              currentPage: currentPage,
+              id: 'locations-pagination'
+            }
+    "
+    class="location-card"
+    (click)="showLocationDetails(location.id)"
+  >
+    <h2>{{ location.name }}</h2>
+    <p>{{ location.type }}</p>
+  </div>
+</div>
+<div class="pagination-container">
+  <pagination-controls
+    (pageChange)="currentPage = $event"
+    previousLabel="Anterior"
+    nextLabel="Siguiente"
+    id="locations-pagination"
+  ></pagination-controls>
+</div>

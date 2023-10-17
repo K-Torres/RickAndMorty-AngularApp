@@ -1,0 +1,37 @@
+.episode-detail {
+  background-color: #2b2d42;
+  color: #ffd700;
+  padding: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.episode-detail h2 {
+  font-size: 2rem;
+  margin: 10px 0;
+}
+
+.episode-detail p {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.episode-detail h3 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.episode-detail ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  text-align: left;
+}
+
+.episode-detail li {
+  font-size: 1rem;
+  margin: 5px 0;
+}

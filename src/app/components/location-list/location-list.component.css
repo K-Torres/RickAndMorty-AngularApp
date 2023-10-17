@@ -1,0 +1,29 @@
+.location-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.location-card {
+  background-color: #1f4068;
+  color: #ffd700;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.location-card:hover {
+  background-color: #ffd700;
+  color: #1f4068;
+}
+
+.location-card h2 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+.location-card p {
+  font-size: 1rem;
+}
