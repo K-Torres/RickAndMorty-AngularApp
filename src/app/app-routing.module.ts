@@ -8,6 +8,7 @@ import { EpisodeListComponent } from './components/episode-list/episode-list.com
 import { EpisodeDetailComponent } from './components/episode-detail/episode-detail.component';
 
 const routes: Routes = [
+    { path: '', redirectTo: "/characters", pathMatch: "full" },
     { path: 'characters', component: CharacterListComponent },
     { path: 'character/:id', component: CharacterDetailComponent },
     { path: 'location/:id', component: LocationDetailComponent },
